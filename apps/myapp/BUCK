@@ -1,0 +1,21 @@
+android_binary(
+  name = 'app',
+  manifest = 'AndroidManifest.xml',
+  manifest_entries = {
+    'version_code': 1,
+    'version_name': '1.0',
+    'min_sdk_version': 26,
+    'target_sdk_version': 29
+  },
+  keystore = ':debug_keystore',
+  deps = [
+    '//kotlin/com/example/activity:activity',
+    '//res/com/example/activity:res',
+  ],
+)
+
+keystore(
+  name = 'debug_keystore',
+  store = 'debug.keystore',
+  properties = 'debug.keystore.properties',
+)

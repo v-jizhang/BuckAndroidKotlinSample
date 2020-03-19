@@ -1,0 +1,6 @@
+android_library(
+  name = 'activity',
+  srcs = glob(['*.kt']),
+  language = "KOTLIN",
+  visibility = [ 'PUBLIC' ],
+)
